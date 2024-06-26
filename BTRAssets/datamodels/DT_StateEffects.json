@@ -1,0 +1,1265 @@
+[
+	{
+		"Name": "Healthy",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Healthy",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"EAF809844993730172434A9B1C26F184\", \"In a good physical and mental condition. No pentalties.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_healthy.T_healthstates_icon_healthy'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 10,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Sick",
+			"Poisoned",
+			"Wounded",
+			"Fatigued",
+			"Drunk",
+			"Infected",
+			"Bleeding"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Sick",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Sick",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"BD8CFDB24F8B39102E898AB75C5C82C5\", \"Affected by physical or mental illness. Gives penalties and is slowly recovering.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_sick.T_healthstates_icon_sick'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 5
+				},
+				{
+					"Attribute": "Energy Regeneration Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -2.5
+				},
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.10000000149011612
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.5
+				},
+				{
+					"Attribute": "Hydration Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.5
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 2
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": true,
+		"Duration": 30,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": true,
+		"Play Animaton": "/Script/Engine.AnimSequence'/Game/Hyper/Locomotion/Chars/Mannequin_UE5/Anims/Actions/State/Anim_puke.Anim_puke'",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Poisoned",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Poisoned",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"F366C985401F2CB587A6929CEACFFEC3\", \"Poisons are substances that can cause death, injury or harm to organs, tissues, cells, and DNA usually by chemical reactions or other activity on the molecular scales, when an organism is exposed to a sufficient quantity. In a metaphorical broader use of term it may refer to any thing deemed harmful. Random chance of early recovering. Antidote helps to restore. Gives damage on interval.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_poisoned.T_healthstates_icon_poisoned'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.05000000074505806
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": true,
+		"Duration": 60,
+		"Has a post process effect": true,
+		"Has a auto recover chance": true,
+		"Chance for auto recover": 0.5,
+		"Time to auto recover": 10,
+		"Recovers automaticly after this time if auto recover was not suceeded": 60,
+		"Apply Interval Damage?": true,
+		"Interval Damage": 9,
+		"Interval Damage Interval": 5,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": true,
+		"Play Animaton": "/Script/Engine.AnimSequence'/Game/Hyper/Locomotion/Chars/Mannequin_UE5/Anims/Actions/State/Anim_puke.Anim_puke'",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Wounded",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Wounded",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"E6023C3D43FCBE0DA053C38F9F9AD235\", \"Suffering injury or bodily harm. Bandage will help\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_wounded.T_healthstates_icon_wounded'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 12.5
+				},
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.30000001192092896
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.5
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 1
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": true,
+		"Duration": 120,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Fatigued",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Fatigued",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"9299CAB14A36D4AB33E335B50DD2AB13\", \"Overall feeling of tiredness or lack of energy.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_fatigued.T_healthstates_icon_fatigued'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Regeneration Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -1
+				},
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 2
+				},
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.20000000298023224
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Drunk",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Drunk",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"520E54B24249599F8F61438228D2CD4C\", \"Drunk, commmonly described as drunkenness or inebriation, is the negative behavior and physical effects caused by a recent consumption of alcohol.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_drunk.T_healthstates_icon_drunk'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 1
+				},
+				{
+					"Attribute": "Hydration Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 1.75
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 3
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [
+				{
+					"Attribute": "Minimal Base Damage",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -5
+				}
+			],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": true,
+		"Duration": 12,
+		"Has a post process effect": true,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": true,
+		"Play Animaton": "/Script/Engine.AnimSequence'/Game/Hyper/Locomotion/Chars/Mannequin_UE5/Anims/Actions/State/Anim_drunk.Anim_drunk'",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Infected",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Infected",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"53EC74AD4732D8787FB4DAB320170126\", \"An infection is the invasion of an organism\\'s body tissues by disease-causing agents, their multiplication, and the reaction of host tissues to the infectious agents and the toxins they produce. You are slowly dieing and are in need of medicine.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_infected.T_healthstates_icon_infected'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.15000000596046448
+				},
+				{
+					"Attribute": "Energy Regeneration Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -2.5
+				},
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 3.5
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Hydration Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.5
+				},
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.20000000298023224
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 120,
+		"Apply Interval Damage?": true,
+		"Interval Damage": 5,
+		"Interval Damage Interval": 7,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Bleeding",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Bleeding",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"2BBD6BDF46471BF9C3988AAB09F0EB23\", \"Bleeding is the loss of blood. It can be external, or outside the body, like when you get a cut or wound. It can also be internal, or inside the body, like when you have an injury to an internal organ. You can hope it stops or use some bandage.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Health_States/T_healthstates_icon_bleeding.T_healthstates_icon_bleeding'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.18000000715255737
+				},
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 5
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.75
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": true,
+		"Chance for auto recover": 0.75,
+		"Time to auto recover": 10,
+		"Recovers automaticly after this time if auto recover was not suceeded": 120,
+		"Apply Interval Damage?": true,
+		"Interval Damage": 5,
+		"Interval Damage Interval": 15,
+		"On activated remove these effects": [
+			"Healthy"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "VeryCold",
+		"Effect Catagory": "Temperature Effects",
+		"Effect State": "Very Cold",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"AA1EB446404702474A7B69B39ABC285B\", \"You are freezing to death! Get some heat by going inside or warm yourself up with clothes or by standing neara campfire.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Temperature_States/T_icons_temperaturestates_verycold.T_icons_temperaturestates_verycold'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 7.5
+				},
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.05000000074505806
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.75
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.34999999403953552
+				},
+				{
+					"Attribute": "Hydration Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.10000000149011612
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Cold",
+			"Normal Temperature",
+			"Hot",
+			"Very Hot"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Cold",
+		"Effect Catagory": "Temperature Effects",
+		"Effect State": "Cold",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"65D199AB47E4BE37560BACA97267B2FF\", \"You are cold but are able to handle it! Get some heat by going inside or warm yourself up with clothes or by standing neara campfire.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Temperature_States/T_icons_temperaturestates_cold.T_icons_temperaturestates_cold'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 3.5
+				},
+				{
+					"Attribute": "Maximum Health",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.34999999403953552
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.20000000298023224
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Very Cold",
+			"Normal Temperature",
+			"Hot",
+			"Very Hot"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "NormalTemperature",
+		"Effect Catagory": "Temperature Effects",
+		"Effect State": "Normal Temperature",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"520F2C574C3E3491F3EB2BA90DABBC0D\", \"You are in a normal range of temperature and do not feel any negative effects.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Temperature_States/T_icons_temperaturestates_normal.T_icons_temperaturestates_normal'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Very Cold",
+			"Cold",
+			"Hot",
+			"Very Hot"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Hot",
+		"Effect Catagory": "Temperature Effects",
+		"Effect State": "Hot",
+		"Description": "",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Temperature_States/T_icons_temperaturestates_hot.T_icons_temperaturestates_hot'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 3
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.10000000149011612
+				},
+				{
+					"Attribute": "Hydration Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.40000000596046448
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.25
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Very Cold",
+			"Cold",
+			"Normal Temperature",
+			"Very Hot"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "VeryHot",
+		"Effect Catagory": "Temperature Effects",
+		"Effect State": "Very Hot",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"90F07DEE49CA91F141050ABA030C9C53\", \"You are burning away and melting to death! Find some cooling, for instance water!\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Temperature_States/T_icons_temperaturestates_veryhot.T_icons_temperaturestates_veryhot'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Energy Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 12
+				},
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.125
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Hydration Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.5
+				},
+				{
+					"Attribute": "Food Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.10000000149011612
+				},
+				{
+					"Attribute": "Fatigue Consumption Rate",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.34999999403953552
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"Very Cold",
+			"Cold",
+			"Normal Temperature",
+			"Hot"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "OnFire",
+		"Effect Catagory": "Misc Effects",
+		"Effect State": "On Fire",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"6276E87F413A430084853AAB404DBD06\", \"You are on fire and dying very fast! Rung quickly and jump into the water!\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Misc_States/T_icons_miscstates_OnFire.T_icons_miscstates_OnFire'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 0.25
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Chill Temperature Penalty",
+					"Attribute Value Base": 42.234527587890625,
+					"Attribute Value Added": 900
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": true,
+		"Duration": 10,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": true,
+		"Interval Damage": 15,
+		"Interval Damage Interval": 2,
+		"On activated remove these effects": [
+			"Wet"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": true,
+		"Unactivated Sound": "/Script/Engine.SoundCue'/Game/Hyper/ResourcePack/Sounds/State_Effect_Sounds/extinguish_fire_Cue.extinguish_fire_Cue'",
+		"Play Animation": true,
+		"Play Animaton": "/Script/Engine.AnimSequence'/Game/Hyper/Locomotion/Chars/Mannequin_UE5/Anims/Actions/State/Anim_OnFire.Anim_OnFire'",
+		"Play Particle Effect": true,
+		"Particle Effect": "/Script/Engine.BlueprintGeneratedClass'/Game/Hyper/Attribute_System/Blueprints/BP_Effect_Fire.BP_Effect_Fire_C'"
+	},
+	{
+		"Name": "Wet",
+		"Effect Catagory": "Misc Effects",
+		"Effect State": "Wet",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"3C75B4AC4BDE424490C2BFB5AB13EE46\", \"You are wet. Nothing to worry about but it is not nice when there is a chill wind. It is also a bit harder to move.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Misc_States/T_icons_miscstates_Wet.T_icons_miscstates_Wet'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.075000002980232239
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Chill Temperature Penalty",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -10
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": true,
+		"Duration": 10,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [
+			"On Fire"
+		],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Warmed",
+		"Effect Catagory": "Misc Effects",
+		"Effect State": "Warmed",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"E4F880AE4DA96E973E1E4481346D8023\", \"You are warmed. This can be nice if it was getting a bit cold. If if it already hot I would not recoomend it.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Misc_States/T_icons_miscstates_Warmed.T_icons_miscstates_Warmed'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [
+				{
+					"Attribute": "Chill Temperature Penalty",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": 8
+				}
+			],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Encumbered",
+		"Effect Catagory": "Misc Effects",
+		"Effect State": "Encumbered",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"F94E9A2D4BB6F98239453CA69F373329\", \"You are encumbered! You are carrying to much weight.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Player_States/T_weight_icon.T_weight_icon'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [
+				{
+					"Attribute": "Movement Speed",
+					"Attribute Value Base": 0,
+					"Attribute Value Added": -0.80000001192092896
+				}
+			],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "LevelUp",
+		"Effect Catagory": "Misc Effects",
+		"Effect State": "Level Up",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"B5E475264CA9F1AD857EF6B093EC5551\", \"There are Attribute points available which can be assigned.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Misc_States/T_icons_miscstates_LevelUp_Available.T_icons_miscstates_LevelUp_Available'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "ActiveEffects",
+		"Effect Catagory": "Misc Effects",
+		"Effect State": "Active Effects",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"96B8780D401930DE10ABA3A3D0AAC0AD\", \"There are Active temporaral effects from e.g. potions or buffs. Check the attribute details panel to view the current active effects.\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Misc_States/T_icons_miscstates_ActiveEffect_Potion.T_icons_miscstates_ActiveEffect_Potion'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Hungry",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Hungry",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"A91BE289427A93B3826ACFB9E7C84141\", \"Hungry\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Player_States/T_food_icon.T_food_icon'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": true,
+		"Play Animaton": "/Script/Engine.AnimSequence'/Game/Hyper/Locomotion/Chars/Mannequin_UE5/Anims/Actions/State/Anim_stomache_ache.Anim_stomache_ache'",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Thirsty",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Thirsty",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"63C560174A6AE915A1B5A49287A6CF60\", \"Thirsty\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Player_States/T_water_icon.T_water_icon'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": true,
+		"Play Animaton": "/Script/Engine.AnimSequence'/Game/Hyper/Locomotion/Chars/Mannequin_UE5/Anims/Actions/State/Anim_stomache_ache.Anim_stomache_ache'",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "Lowenergy",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Low energy",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"08A5E5FB464E2FC604FE8592EB379A78\", \"Low energy\")",
+		"Icon": "None",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "LowHealth",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Low Health",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"0B9630F64827A7E91957FABBEE2F2168\", \"Low Health\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/UI_Icons/T_health_icon.T_health_icon'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	},
+	{
+		"Name": "LowOxygen",
+		"Effect Catagory": "Health Effects",
+		"Effect State": "Low Oxygen",
+		"Description": "NSLOCTEXT(\"[4E0818404E2EC1E8992D15B3F0AC1549]\", \"ECCC7392413147C36E3AD2A967917DDF\", \"Low Oxygen\")",
+		"Icon": "/Script/Engine.Texture2D'/Game/Hyper/ResourcePack/Icons/Player_States/T_02_icon.T_02_icon'",
+		"Assigned Attributes":
+		{
+			"Non-Persistent_Character_Attributes": [],
+			"Persistent_Primary_Character_Attributes": [],
+			"Persistent_Character_Survival_Attributes": [],
+			"Persistant_Generic_Combat_Attributes": [],
+			"Persistant_Ranged_Combat_Attributes": [],
+			"Persistant_Level_Attributes": [],
+			"When consumed add these state effects": [],
+			"When consumed remove these state effects": []
+		},
+		"Is temporary?": false,
+		"Duration": 0,
+		"Has a post process effect": false,
+		"Has a auto recover chance": false,
+		"Chance for auto recover": 0,
+		"Time to auto recover": 0,
+		"Recovers automaticly after this time if auto recover was not suceeded": 0,
+		"Apply Interval Damage?": false,
+		"Interval Damage": 0,
+		"Interval Damage Interval": 0,
+		"On activated remove these effects": [],
+		"On activated add these effects": [],
+		"On removed, activate these effects": [],
+		"On Activated Play Sound": false,
+		"Activated Sound": "None",
+		"On Unactivated play sound": false,
+		"Unactivated Sound": "None",
+		"Play Animation": false,
+		"Play Animaton": "None",
+		"Play Particle Effect": false,
+		"Particle Effect": "None"
+	}
+]

@@ -1,0 +1,49 @@
+# Wavefront material file
+# Converted by OBJ Translator, version 9.7.0.0
+# SAP SE
+# http://www.sap.com
+#
+
+newmtl Layer_1_Back_Inflation_Material
+Ka 0 0 0
+Kd 0.5 0.5 0.5
+Ks 0 0 0
+illum 2
+Ns 2
+
+newmtl mat_5
+Ka 0.117647 0.117647 0.117647
+Kd 0.752941 0.752941 0.752941
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+
+newmtl Layer_1_Front_Inflation_Material
+Ka 0 0 0
+Kd 0.5 0.5 0.5
+Ks 0 0 0
+illum 2
+Ns 2
+
+newmtl Layer_1_Back_Bevel_Material
+Ka 0 0 0
+Kd 0.5 0.5 0.5
+Ks 0 0 0
+illum 2
+Ns 2
+
+newmtl Layer_1_Front_Bevel_Material
+Ka 0 0 0
+Kd 0.5 0.5 0.5
+Ks 0 0 0
+illum 2
+Ns 2
+
+newmtl Layer_1_Extrusion_Material
+Ka 0 0 0
+Kd 0.5 0.5 0.5
+Ks 0 0 0
+illum 2
+Ns 2
+map_Kd Layer 1 Extrusion Material - Default Texture.png
+

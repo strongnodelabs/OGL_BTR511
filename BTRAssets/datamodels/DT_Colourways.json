@@ -1,0 +1,122 @@
+[
+	{
+		"Name": "DefaultGrey",
+		"Colour":
+		{
+			"B": 108,
+			"G": 108,
+			"R": 108,
+			"A": 255
+		}
+	},
+	{
+		"Name": "Custom",
+		"Colour":
+		{
+			"B": 0,
+			"G": 0,
+			"R": 0,
+			"A": 0
+		}
+	},
+	{
+		"Name": "DarkBlue",
+		"Colour":
+		{
+			"B": 63,
+			"G": 39,
+			"R": 0,
+			"A": 255
+		}
+	},
+	{
+		"Name": "MidBlue",
+		"Colour":
+		{
+			"B": 141,
+			"G": 101,
+			"R": 8,
+			"A": 255
+		}
+	},
+	{
+		"Name": "DarkOrange",
+		"Colour":
+		{
+			"B": 2,
+			"G": 42,
+			"R": 63,
+			"A": 255
+		}
+	},
+	{
+		"Name": "MidOrange",
+		"Colour":
+		{
+			"B": 14,
+			"G": 112,
+			"R": 159,
+			"A": 255
+		}
+	},
+	{
+		"Name": "WarningRed",
+		"Colour":
+		{
+			"B": 23,
+			"G": 0,
+			"R": 120,
+			"A": 255
+		}
+	},
+	{
+		"Name": "Black",
+		"Colour":
+		{
+			"B": 0,
+			"G": 0,
+			"R": 0,
+			"A": 255
+		}
+	},
+	{
+		"Name": "White",
+		"Colour":
+		{
+			"B": 255,
+			"G": 255,
+			"R": 255,
+			"A": 255
+		}
+	},
+	{
+		"Name": "HyperBlue",
+		"Colour":
+		{
+			"B": 182,
+			"G": 68,
+			"R": 0,
+			"A": 255
+		}
+	},
+	{
+		"Name": "HyperPurple",
+		"Colour":
+		{
+			"B": 117,
+			"G": 43,
+			"R": 130,
+			"A": 255
+		}
+	},
+	{
+		"Name": "HyperGrey",
+		"Colour":
+		{
+			"B": 57,
+			"G": 57,
+			"R": 57,
+			"A": 255
+		}
+	}
+]
